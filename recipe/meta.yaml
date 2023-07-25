@@ -1,5 +1,5 @@
 {% set name = "ndtiff" %}
-{% set version = "1.12.0" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ndtiff-{{ version }}.tar.gz
-  sha256: c545bee83fe552dcbe8df27df7392390344c2b11e451daf6d229e87625b6ce5c
+  sha256: e37b214cffe77053c36cbbc2e4a01879755a49cac7e69c8ff9a7602490ea9989
 
 build:
   noarch: python
