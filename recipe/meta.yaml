@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ndtiff-{{ version }}.tar.gz
   sha256: 421f8a58ad2e07e4dc93639ae771a912791297be78f136a3ad9940957ddd6761
+  pacthes:
+    - setup.patch
 
 build:
   noarch: python
