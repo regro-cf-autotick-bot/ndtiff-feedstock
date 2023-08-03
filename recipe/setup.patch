@@ -1,0 +1,15 @@
+diff --git a/setup.py b/setup.py
+index 366f799..af64e5a 100644
+--- a/setup.py
++++ b/setup.py
+@@ -11,8 +11,8 @@ with open(path, encoding="utf8") as f:
+     exec(f.read(), {}, version_ns)
+ version = version_ns["__version__"]
+ 
+-with open("requirements.txt") as f:
+-    requirements = f.read().splitlines()
++
++requirements = []
+ 
+ setuptools.setup(
+     name="ndtiff",

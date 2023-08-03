@@ -1,5 +1,5 @@
 {% set name = "ndtiff" %}
-{% set version = "2.1.0" %}
+{% set version = "2.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,9 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ndtiff-{{ version }}.tar.gz
-  sha256: e37b214cffe77053c36cbbc2e4a01879755a49cac7e69c8ff9a7602490ea9989
+  sha256: 421f8a58ad2e07e4dc93639ae771a912791297be78f136a3ad9940957ddd6761
+  patches:
+    - setup.patch
 
 build:
   noarch: python
@@ -22,6 +24,7 @@ requirements:
     - dask-core >=2022.2.0
     - numpy
     - python >=3.6
+    - sortedcontainers
 
 test:
   imports:
@@ -33,10 +36,11 @@ test:
     - pip
 
 about:
-  home: https://github.com/micro-manager/NDTiffStorage
+  home: https://pypi.org/project/ndtiff
   summary: Python libraries for NDTiff datasets
   license: BSD-3-Clause
   license_file: LICENSE
+  dev_url: https://github.com/micro-manager/NDTiffStorage
 
 extra:
   recipe-maintainers:
