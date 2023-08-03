@@ -22,6 +22,7 @@ requirements:
     - dask-core >=2022.2.0
     - numpy
     - python >=3.6
+    - sortedcontainers
 
 test:
   imports:
