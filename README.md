@@ -3,11 +3,13 @@ About ndtiff-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ndtiff-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/micro-manager/NDTiffStorage
+Home: https://pypi.org/project/ndtiff
 
 Package license: BSD-3-Clause
 
 Summary: Python libraries for NDTiff datasets
+
+Development: https://github.com/micro-manager/NDTiffStorage
 
 Current build status
 ====================
