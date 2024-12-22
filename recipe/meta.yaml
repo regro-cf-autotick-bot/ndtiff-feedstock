@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ndtiff-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ndtiff-{{ version }}.tar.gz
   sha256: be790f1d8f76df68c82bbbac1a9deb312b9373f965585edcbf9bdfdde2f34bf0
   patches:
     - setup.patch
@@ -14,16 +14,16 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - dask-core >=2022.2.0
     - numpy
-    - python >=3.6
+    - python >={{ python_min }}
     - sortedcontainers
 
 test:
@@ -34,6 +34,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/ndtiff
